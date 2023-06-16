@@ -45,7 +45,7 @@ with st.spinner("Generating Summary.."):
         res = summarizer(chunks,
                          max_length=500, 
                          min_length=120, 
-                         do_sample='False')
+                         do_sample=False)
         text = ' '.join([summ['summary_text'] for summ in res])
         # st.write(result[0]['summary_text'])
         st.write(text)
